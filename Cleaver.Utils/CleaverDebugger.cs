@@ -13,12 +13,11 @@ namespace Cleaver.Utils
     public class CleaverDebugger
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
-        TextWriterTraceListener t = new TextWriterTraceListener("my.log");
-        TextWriterTraceListener td = new TextWriterTraceListener("d.log");
+        //private static TextWriterTraceListener myListener = new TextWriterTraceListener("Info.svclog");
         public CleaverDebugger()
         {
-            System.Diagnostics.Debug.Listeners.Add(td);         
-            System.Diagnostics.Trace.Listeners.Add(t);
+            //System.Diagnostics.Debug.Listeners.Add(myListener);         
+            //System.Diagnostics.Trace.Listeners.Add(myListener);
             //System.Diagnostics.Debug.WriteLine("Error");
             //System.Diagnostics.Debug.Flush();
             //t.WriteLine(DateTime.Now.ToString() + " > " + "Error");
@@ -35,6 +34,9 @@ namespace Cleaver.Utils
             String fileName = "Cleaver_" + datetime.ToString("dd_MM_yyyy") + ".Log";
             File.AppendAllText(fileName, datetime.ToString("MM-dd hh:mm") + " > " + msg);
             File.AppendAllText(fileName, "\n");
+            //myListener.WriteLine("Sending trace information");
+            //Trace.Flush();
+            //myListener.Flush();
         }
 
         public static void Error(string msg)
