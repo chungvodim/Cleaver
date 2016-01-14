@@ -2,6 +2,7 @@
 using NLog;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -18,7 +19,7 @@ namespace Cleaver.Service
             try
             {
                 Task.Run(() => {
-                    Debug.Info("heheehe");
+                    CleaverDebugger.Info("hehehee");
                     } 
                 );
                 return "";
@@ -33,7 +34,7 @@ namespace Cleaver.Service
         {
             try
             {
-                Debug.Info(id);
+                Cleaver.Utils.CleaverDebugger.Info(id);
             }
             catch (Exception ex)
             {
