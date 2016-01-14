@@ -16,11 +16,12 @@ namespace Cleaver.Service
         [OperationContract]
         [FaultContract(typeof(ProductFault))]
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
-        void Transfer(TransferTask task);
+        string Transfer(int id);
+
         [OperationContract]
         [FaultContract(typeof(ProductFault))]
         [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
-        void GetBalance(TransferTask task);
+        void GetBalance(int id);
     }
 
     [DataContract]
@@ -33,5 +34,18 @@ namespace Cleaver.Service
 
         [DataMember]
         public string FaultMessage;
+    }
+    public class TransferTask
+    {
+        public string ID { get; set; }
+        public string AccountName { get; set; }
+        public string CreditAccount { get; set; }
+        public decimal Amount { get; set; }
+        public string Content { get; set; }
+        /// <summary>
+        /// UTC +0
+        /// </summary>
+        public DateTime UpdateTime { get; set; }
+        public string ToBankID { get; set; }
     }
 }

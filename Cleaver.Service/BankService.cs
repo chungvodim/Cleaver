@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cleaver.Utils;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -10,11 +12,11 @@ namespace Cleaver.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "BankService" in both code and config file together.
     public class BankService : IBankService
     {
-        public void Transfer(Core.TransferTask task)
+        public string Transfer(int id)
         {
             try
             {
-
+                return "";
             }
             catch (Exception ex)
             {
@@ -22,11 +24,11 @@ namespace Cleaver.Service
             }
         }
 
-        public void GetBalance(Core.TransferTask task)
+        public void GetBalance(int id)
         {
             try
             {
-
+                Debug.Info(id);
             }
             catch (Exception ex)
             {
