@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Cleaver.Service
 {
@@ -16,6 +17,10 @@ namespace Cleaver.Service
         {
             try
             {
+                Task.Run(() => {
+                    Debug.Info("heheehe");
+                    } 
+                );
                 return "";
             }
             catch (Exception ex)
