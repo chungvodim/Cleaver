@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cleaver.Utils
+namespace Cleaver.Data
 {
     public class ParseResult
     {

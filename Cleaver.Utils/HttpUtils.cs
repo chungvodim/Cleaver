@@ -12,42 +12,6 @@ using System.Threading.Tasks;
 namespace Cleaver.Utils {
     public class HttpUtils {
 
-        public static MultipartFormDataContent CreateMultipartContent(Stream stream, string name, string subfix) {
-            var content = new MultipartFormDataContent();
-            var image = new StreamContent(stream);
-            image.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data") {
-                Name = name,
-                FileName = string.Format("\"{0}.{1}\"", name, subfix)
-            };
-            content.Add(image);
-            return content;
-        }
-
-        public static StringContent CreateFormEncodedData(NameValueCollection keyValues)
-        {
-            return CreateFormEncodedData(keyValues, Encoding.UTF8);
-        }
-
-        public static StringContent CreateFormEncodedData(NameValueCollection keyValues, Encoding encoding)
-        {
-            return CreateFormEncodedData(keyValues.ToQueryString(encoding));
-        }
-
-        public static StringContent CreateFormEncodedData(string queryString) {
-            return CreateFormEncodedData(queryString, Encoding.UTF8);
-        }
-
-        public static StringContent CreateFormEncodedData(string queryString, Encoding encoding) {
-            return new StringContent(queryString, encoding, Request.MediaTypes.FormEncodedData);
-        }
-
-        internal static StringContent CreateFormEncodedData(Parameters parameters)
-        {
-            return CreateFormEncodedData(parameters, Encoding.UTF8);
-        }
-
-        internal static StringContent CreateFormEncodedData(Parameters parameters, Encoding encoding) {
-            return CreateFormEncodedData(parameters.ToQueryString(encoding));
-        }
+        
     }
 }

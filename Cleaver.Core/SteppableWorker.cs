@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Cleaver.Utils.Http;
+using Cleaver.Utils;
 
 namespace Cleaver.Core.Steps {
 
@@ -115,5 +118,31 @@ namespace Cleaver.Core.Steps {
 
         public abstract Step<T>[] AllSteps();
         public virtual void Dispose(T context, Result<T> result) { }
+        public async Task<OTPResult> FetchOTPAsync(HttpClient client, string otpUrl)
+        {
+            try
+            {
+                using (var rsp = await client.GetAsync(otpUrl))
+                {
+                    return OTPResult.From(rsp.Content.ReadAsStringAsync().Result);
+                }
+            }
+            catch { }
+            return new OTPResult();
+        }
+
+        public ReportStatus ReportFinalPage(HttpClient client, string reportUrl, string transactionId, string lastPage, Encoding encoding)
+        {
+            var pp = new Parameters();
+            pp["commandId"] = transactionId;
+            pp["content"] = lastPage;
+
+            using (var rsp = client.PostAsync(reportUrl, pp.ToFormEncodedData(encoding)).Result)
+            {
+                var page = rsp.Content.ReadAsStringAsync().Result;
+
+                return Serializer.DeserializeJsonObject<ReportStatus>(page, encoding);
+            }
+        }
     }
 }

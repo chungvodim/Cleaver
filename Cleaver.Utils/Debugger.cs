@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Cleaver.Utils
 {
-    public class CleaverDebugger
+    public class Debugger
     {
         private static Logger _logger = LogManager.GetCurrentClassLogger();
 
