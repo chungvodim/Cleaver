@@ -4,8 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,31 +16,40 @@ namespace Cleaver.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "BankService" in both code and config file together.
     public class BankService : IBankService
     {
-        public string Transfer(int id)
+        public string Transfer(string id, string accountNumber, string accountName, decimal amount, string w88TransId, string toBankId)
         {
             try
             {
-                Task.Run(() => {
-                    CleaverDebugger.Info("hehehee");
-                    } 
-                );
-                return "";
+                var x = 0;
+                var y = 0;
+                var z = x / y;
+                return string.Join("-", id, accountNumber, accountName, amount, w88TransId, toBankId);
             }
-            catch (Exception ex)
+            //catch (Exception ex)
+            //{
+            //    //throw new FaultException<ProductFault>(new ProductFault(ex.Message), "unknown reason");
+            //    throw new FaultException(ex.Message, new FaultCode("internal error"));// Use it for SOAP
+            //}
+            catch
             {
-                throw new FaultException<ProductFault>(new ProductFault(ex.Message), "unknown reason");
+                
+                throw new WebFaultException(HttpStatusCode.BadRequest);// Use it for REST
             }
         }
 
-        public void GetBalance(int id)
+        public string GetBalance(string id, string accountNumber, string accountName, decimal amount, string w88TransId, string lastUpdateTime)
         {
             try
             {
-                Cleaver.Utils.CleaverDebugger.Info(id);
+                return string.Join("-",id, accountNumber, accountName, amount, w88TransId, lastUpdateTime);
             }
-            catch (Exception ex)
+            //catch (Exception ex)
+            //{
+            //    throw new FaultException(ex.Message, new FaultCode("internal error"));// Use it for SOAP
+            //}
+            catch
             {
-                throw new FaultException<ProductFault>(new ProductFault(ex.Message), "unknown reason");
+                throw new WebFaultException(HttpStatusCode.BadRequest);// Use it for REST
             }
         }
     }

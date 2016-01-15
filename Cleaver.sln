@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Service", "Cleaver.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Utils", "Cleaver.Utils\Cleaver.Utils.csproj", "{DA08D383-D2F2-409B-A2F6-9C916F11A271}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Host", "Cleaver.Host\Cleaver.Host.csproj", "{687CA4F5-346E-4C42-A91A-C1234D2334DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DA08D383-D2F2-409B-A2F6-9C916F11A271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA08D383-D2F2-409B-A2F6-9C916F11A271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA08D383-D2F2-409B-A2F6-9C916F11A271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
