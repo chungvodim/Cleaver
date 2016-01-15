@@ -18,12 +18,14 @@ namespace Cleaver.Service
         [OperationContract]
         [FaultContract(typeof(ProductFault))]
         //[WebGet(UriTemplate = "/Transfer?id={id}&accountname={accountname}")]
-        [WebInvoke(UriTemplate = "/Transfer?id={id}&ca={accountNumber}&n={accountName}&a={amount}&c={w88TransId}&tb={toBankId}", Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(UriTemplate = "/Transfer?id={id}&ca={accountNumber}&n={accountName}&a={amount}&c={w88TransId}&tb={toBankId}", 
+            Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
         string Transfer(string id, string accountNumber, string accountName, decimal amount, string w88TransId, string toBankId);
 
         [OperationContract]
         [FaultContract(typeof(ProductFault))]
-        [WebInvoke(UriTemplate = "/GetBalance?id={id}&ca={accountNumber}&n={accountName}&a={amount}&c={w88TransId}&t={lastUpdateTime}", Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(UriTemplate = "/GetBalance?id={id}&ca={accountNumber}&n={accountName}&a={amount}&c={w88TransId}&t={lastUpdateTime}", 
+            Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
         string GetBalance(string id, string accountNumber, string accountName, decimal amount, string w88TransId, string lastUpdateTime);
 
         //[OperationContract(AsyncPattern = true)]

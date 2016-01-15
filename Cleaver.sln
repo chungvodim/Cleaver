@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Utils", "Cleaver.Ut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Host", "Cleaver.Host\Cleaver.Host.csproj", "{687CA4F5-346E-4C42-A91A-C1234D2334DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Data", "Cleaver.Data\Cleaver.Data.csproj", "{BC0C199A-6789-4BDF-B738-C56D7F75A55A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{687CA4F5-346E-4C42-A91A-C1234D2334DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

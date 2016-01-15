@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Cleaver.Core
-{
-    public class TransferTask
-    {
+namespace Cleaver.Data {
+    public class TransferTask {
         public string ID { get; set; }
         public string AccountName { get; set; }
         public string CreditAccount { get; set; }
