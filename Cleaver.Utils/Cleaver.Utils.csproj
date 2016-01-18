@@ -53,16 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CleaverDebugger.cs" />
-    <Compile Include="CleaverUtils.cs" />
     <Compile Include="CryptographyHelper.cs" />
     <Compile Include="DateUtils.cs" />
+    <Compile Include="Debugger.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FileSystemUtils.cs" />
-    <Compile Include="HttpUtils.cs" />
     <Compile Include="Http\Parameters.cs" />
     <Compile Include="Http\Request.cs" />
-    <Compile Include="ParseResult.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomHelper.cs" />
     <Compile Include="Serializer.cs" />
@@ -72,6 +70,12 @@
     <None Include="App.config" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cleaver.Data\Cleaver.Data.csproj">
+      <Project>{bc0c199a-6789-4bdf-b738-c56d7f75a55a}</Project>
+      <Name>Cleaver.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

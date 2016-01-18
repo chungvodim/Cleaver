@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,14 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaptchaResult.cs" />
-    <Compile Include="CardOTPResult.cs" />
-    <Compile Include="CleaverContext.cs" />
-    <Compile Include="OTPResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TransferResult.cs" />
-    <Compile Include="TransferTask.cs" />
-    <Compile Include="WorkerStatus.cs" />
+    <Compile Include="ViewModels\CaptchaResult.cs" />
+    <Compile Include="ViewModels\CardOTPResult.cs" />
+    <Compile Include="ViewModels\OTPResult.cs" />
+    <Compile Include="ViewModels\ParseResult.cs" />
+    <Compile Include="ViewModels\ReportStatus.cs" />
+    <Compile Include="ViewModels\TransferResult.cs" />
+    <Compile Include="ViewModels\TransferTask.cs" />
+    <Compile Include="ViewModels\WorkerStatus.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

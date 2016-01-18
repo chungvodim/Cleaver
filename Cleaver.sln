@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Host", "Cleaver.Hos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleaver.Data", "Cleaver.Data\Cleaver.Data.csproj", "{BC0C199A-6789-4BDF-B738-C56D7F75A55A}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Cleaver.Database", "Cleaver.Database\Cleaver.Database.sqlproj", "{799AC816-5980-4796-8AE8-53CB79104519}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC0C199A-6789-4BDF-B738-C56D7F75A55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799AC816-5980-4796-8AE8-53CB79104519}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
