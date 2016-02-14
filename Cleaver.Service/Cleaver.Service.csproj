@@ -102,10 +102,10 @@
   <Import Project="$(WcfServiceModelTargetPath)\Microsoft.VisualStudio.ServiceModel.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-      xcopy "$(AssemblyName).dll" "C:\WorkSpace\Cleaver\Cleaver.Service\HostIIS\bin" /Y
-      xcopy "$(AssemblyName).pdb" "C:\WorkSpace\Cleaver\Cleaver.Service\HostIIS\bin" /Y
-      xcopy "$(AssemblyName).dll" "C:\WorkSpace\Cleaver\Cleaver.Service\HostIISTcp\bin" /Y
-      xcopy "$(AssemblyName).pdb" "C:\WorkSpace\Cleaver\Cleaver.Service\HostIISTcp\bin" /Y
+      xcopy "$(AssemblyName).dll" "$(ProjectDir)\HostIIS\bin" /Y
+      xcopy "$(AssemblyName).pdb" "$(ProjectDir)\HostIIS\bin" /Y
+      xcopy "$(AssemblyName).dll" "$(ProjectDir)\HostIISTcp\bin" /Y
+      xcopy "$(AssemblyName).pdb" "$(ProjectDir)\HostIISTcp\bin" /Y
     </PostBuildEvent>
   </PropertyGroup>
   <ProjectExtensions>
